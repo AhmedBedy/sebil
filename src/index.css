@@ -1,0 +1,195 @@
+/* 🌟 Maison de Révision Styling 🌟 */
+
+/* CSS variables for easy theming */
+:root {
+  --background-color: #f8e3bf; /* creamy yellow */
+  --primary-color: #bc0909ea; /* warm orange */
+  --secondary-color: #00ff2a; /* soft blue */
+  --accent-green: #4caf50; /* friendly green */
+  --accent-red: #f44336; /* friendly red */
+  --text-color: #333333; /* dark gray */
+  --card-bg: #ffffff;
+  --input-border: #cccccc;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --font-family: 'Comic Sans MS', cursive, 'Tahoma', 'Arial', sans-serif; /* kid-friendly font */
+
+  min-width: 320px;
+}
+
+/* Global base */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  direction: ltr;
+}
+/* 
+body.rtl {
+  direction: rtl;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+*/
+
+
+/* Container */
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  font-weight: bold;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+  font-family: 'Tahoma', 'Arial', sans-serif;
+  margin-top: 0;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+/* Links */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+/* Cards / Panels */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 4px 8px var(--shadow);
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Buttons - general */
+button {
+  font-family: inherit;
+  font-size: 1.2em;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0.5rem 0;
+  min-width: 100px;
+}
+
+/* Primary Button */
+button.primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+button.primary:hover {
+  background-color: #e5941d;
+  transform: scale(1.02);
+}
+
+/* Secondary Button */
+button.secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+button.secondary:hover {
+  background-color: #3a7bc0;
+  transform: scale(1.02);
+}
+
+/* Input Fields */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 1.1em;
+  padding: 14px;
+  border: 2px solid var(--input-border);
+  border-radius: var(--radius);
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+/* Forms */
+form {
+  max-width: 100%;
+  text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #root {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 12px 20px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
