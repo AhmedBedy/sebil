@@ -83,7 +83,7 @@ export default function App() {
       appTitle: 'Maison de Révision',
       login: 'Login',
       ourCourses: 'Our Courses',
-      searchCourses: 'Search courses...',
+      searchCourses: 'Search course...',
       prerequisiteFor: 'Prerequisite Courses for ',
       completePrerequisites:
         'Please complete all prerequisite courses before continuing.',
@@ -123,7 +123,7 @@ export default function App() {
       appTitle: 'Maison de Révision',
       login: 'Se Connecter',
       ourCourses: 'Nos Cours',
-      searchCourses: 'Rechercher des cours...',
+      searchCourses: 'Rechercher un cours...',
       prerequisiteFor: 'Cours préalables pour ',
       completePrerequisites:
         'Veuillez compléter tous les cours préalables avant de continuer.',
@@ -164,7 +164,7 @@ export default function App() {
       appTitle: 'بيت المـــــراجعة',
       login: ' الدخول',
       ourCourses: 'دروسنا',
-      searchCourses: 'ابحث عن الدروس...',
+      searchCourses: 'ابحث عن درس...',
       prerequisiteFor: 'الدروس اللازمة لمتابعة درس  ',
       completePrerequisites: 'يرجى إكمال جميع الدروس اللازمة قبل المتابعة.',
       welcome: 'مرحبًا بك في بيت المراجعة!',
