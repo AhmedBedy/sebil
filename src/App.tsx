@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useMemo } from 'react';
+//import { useMemo } from 'react';
 
 import { supabase } from './supabaseClient';
 
@@ -236,7 +236,7 @@ export default function App() {
   const [prereqTargetCourse, setPrereqTargetCourse] = useState<Course | null>(
     null
   );
-  const [showPrereqCheck, setShowPrereqCheck] = useState(false);
+  //const [showPrereqCheck, setShowPrereqCheck] = useState(false);
 
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
@@ -258,13 +258,13 @@ export default function App() {
     setToastMessage(msg);
     setTimeout(() => setToastMessage(null), 7000); // Toast visible for 7 seconds
   };
-
+/*
   const passedCourses = useMemo(() => {
     return new Set(
       studentProgress.filter((p) => p.completed).map((p) => p.course_id)
     );
   }, [studentProgress]);
-
+*/
   useEffect(() => {
     loadCourses();
   }, []);
@@ -354,7 +354,7 @@ export default function App() {
   const getCourseById = (id: number): Course | undefined => {
     return courses.find((course) => course.id === id);
   };
-
+/*
   const getStudentStatusForCourse = (course: Course) => {
     if (!course.prerequisites || course.prerequisites.length === 0) {
       return [];
@@ -371,6 +371,7 @@ export default function App() {
       };
     });
   };
+  */
 
   const handleStudentLogout = () => {
     setStudentAuthenticated(false);
@@ -968,7 +969,7 @@ export default function App() {
                       console.log('DEBUG: currentStudent', currentStudent);
                       console.log('DEBUG: selectedCourse', selectedCourse);
                       if (currentStudent && selectedCourse) {
-                        const { data, error } = await supabase
+                        const {  error } = await supabase
                           .from('progress')
                           .upsert(
                             [
